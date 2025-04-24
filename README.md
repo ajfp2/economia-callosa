@@ -1,3 +1,11 @@
+# Economía Circular- Callosa d'en Sarrià
+
+Sitio web del Ayuntamiento de Callosa d'en Sarrià, para charlas, talleres y cursos orientados a la gestión de la econmóa circular. Todo este proyecto está basado en UOC Boilerparte para la PEC 2 de la asignagura Herramientas Html y Css II.
+
+## Autor
+Alfonso José Ferrando Puigcerver
+
+
 # UOC Boilerplate
 
 UOC Boilerplate is a starter template for the HTML and CSS Tools courses from the [Master's Program in Multimedia Applications](https://estudis.uoc.edu/ca/masters-universitaris/aplicacions-multimedia/presentacio) and the [Master's Program in Web App and Website Development](https://estudis.uoc.edu/ca/masters-universitaris/desenvolupament-llocs-aplicacions-web/presentacio) at the [Universitat Oberta de Catalunya](https://www.uoc.edu). It aims to provide a basic, modern frontend web development starter pack based on Parcel and including a Sass compiler, an ES6 transpiler, minifiers, an image transformer, and development tools.
