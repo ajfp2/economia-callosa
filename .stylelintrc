@@ -1,0 +1,21 @@
+{
+    "extends": [
+        "stylelint-config-recommended-scss"
+    ],
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-selector-bem-pattern"
+    ],
+    "rules": {
+        "plugin/selector-bem-pattern": {
+        "preset": "bem",
+        "componentName": "[A-Z]+",
+        "componentSelectors": {
+            "initial": "^\\.{componentName}(?:-[a-z]+)?(?:__[a-z]+)?(?:--[a-z]+)?$"
+        }
+    },
+        "block-no-empty": true,
+        "color-no-invalid-hex": true,
+        "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$"
+    }
+}
