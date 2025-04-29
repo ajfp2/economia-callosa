@@ -18,6 +18,13 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
+
+@layer bootstrap_capa {
+
+    @import "bootstrap/scss/bootstrap.scss";
+  
+}
+
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
 
 /**
