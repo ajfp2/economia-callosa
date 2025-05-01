@@ -3,6 +3,7 @@
   "version": "3.11.0",
   "private": true,
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "type": "module",
   "scripts": {
     "parcel:serve": "parcel -p 8123 --target web --open",
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",
@@ -16,7 +17,7 @@
     "web": {
       "context": "browser",
       "publicUrl": "./",
-      "source": "src/index.html",
+      "source": "src/*.html",
       "engines": {
         "browsers": "last 2 versions, > 0.5%, not dead"
       }
