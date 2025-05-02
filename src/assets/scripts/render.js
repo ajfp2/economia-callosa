@@ -1,7 +1,7 @@
+const app = document.getElementById("approot");
 
 export async function render(nompage) {
     // Renderiza la página
-    const app = document.getElementById("approot");
     console.log('exposr', nompage);
 
     try{

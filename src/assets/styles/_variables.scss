@@ -10,3 +10,19 @@ $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  // display: flex;
+  // flex-direction: column;
+  height: 100vh;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $uoc-bg;
+  color: $uoc-corporate;
+}

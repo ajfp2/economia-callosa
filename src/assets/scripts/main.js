@@ -16,17 +16,14 @@ import { render } from './render';
 
 +( function() {
   document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('.nav-link');
+    const links = document.querySelectorAll('.nav-link');        
     links.forEach(link => {
         link.classList.remove('active');
         link.addEventListener('click', event => {
           const name = link.getAttribute('data-url');
-          if(name != 'index') {
-            event.preventDefault();            
-            
-            link.classList.add('active');
-            render(name);
-          }
+          event.preventDefault();                        
+          link.classList.add('active');
+          render(name);
         });
     });
   });
