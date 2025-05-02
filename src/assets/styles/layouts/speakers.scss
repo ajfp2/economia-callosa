@@ -1,0 +1,12 @@
+.flex-grid {
+    display: flex; /* Makes this a true flex container! */
+    // flex-direction: row;
+    // justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.flex-item {
+    margin: 10px;
+}

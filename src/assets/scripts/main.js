@@ -18,10 +18,15 @@ import { render } from './render';
   document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.nav-link');
     links.forEach(link => {
+        link.classList.remove('active');
         link.addEventListener('click', event => {
+          const name = link.getAttribute('data-url');
+          if(name != 'index') {
             event.preventDefault();            
-            const name = link.getAttribute('data-url');
-            render(name)  ;
+            
+            link.classList.add('active');
+            render(name);
+          }
         });
     });
   });
