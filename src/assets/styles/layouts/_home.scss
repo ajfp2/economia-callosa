@@ -1,0 +1,71 @@
+.grid-poster {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		"intro 		intro 		chef"
+		"intro 		intro 		chef"
+		"calendar   ayto 	chef"
+		"table   	matricula 	matricula";
+
+	padding: 1px;
+	background-color: $blanco;
+	// font-family: var(--ff-3);
+	font-weight: 500;
+	margin-inline: auto;
+	margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+}
+
+
+.intro {
+	grid-area: intro;
+	background-color: $uoc-corporate;
+	color: #fff;
+    padding: 10px;
+}
+
+.list-info {
+    display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.chef {
+	grid-area: chef;
+	background-image: url(../images/casacul.jpg);
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.ayto {
+	grid-area: ayto;
+	background-image: url(../images/logos/logoCallosa.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.calendar {
+	grid-area: calendar;
+	text-align: center;
+    background-color: $uoc-corporate;
+	color: #fff;
+}
+
+.matricula {
+	grid-area: matricula;
+	text-align: center;
+    background-color: $uoc-corporate;
+	color: #fff;
+}
+
+.table {
+	grid-area: table;
+	background-image: url(../images/logos/logoUOC.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

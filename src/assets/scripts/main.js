@@ -13,20 +13,21 @@ import { render } from './render';
  * Write any other JavaScript below
 */
 
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.nav-link');        
+  links.forEach(link => {
+      link.classList.remove('active');
+      link.addEventListener('click', event => {
+        const name = link.getAttribute('data-url');
+        event.preventDefault();                        
+        link.classList.add('active');
+        render(name);
+      });
+  });
+});
 
 +( function() {
-  document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('.nav-link');        
-    links.forEach(link => {
-        link.classList.remove('active');
-        link.addEventListener('click', event => {
-          const name = link.getAttribute('data-url');
-          event.preventDefault();                        
-          link.classList.add('active');
-          render(name);
-        });
-    });
-  });
+
   
   console.log("hola");
 } )();
