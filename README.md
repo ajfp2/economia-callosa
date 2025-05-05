@@ -5,9 +5,12 @@ Sitio web del Ayuntamiento de Callosa d'en Sarrià, para charlas, talleres y cur
 ## Autor
 Alfonso José Ferrando Puigcerver
 
-# Repositorio
+## Repositorio
 - GitHub: https://github.com/ajfp2/economia-callosa.git
 - Netlify: https://economiacallosa.netlify.app
+
+## Imágenes
+Imagenes de personas creadas desde https://www.freepik.es/
 
 
 # UOC Boilerplate

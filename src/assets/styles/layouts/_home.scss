@@ -18,7 +18,7 @@
     border-radius: 10px;
 
 	@media (max-width: $mqMaxWidth) {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
 			"intro		intro"
 			"intro		intro"
@@ -55,6 +55,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 5px;
+	@media (max-width: $mqMaxWidth) {
+		display: none;
+	}
 }
 
 .ayto {
@@ -101,4 +104,7 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	@media (max-width: $mqMaxWidth) {
+		display: none;
+	}
 }
