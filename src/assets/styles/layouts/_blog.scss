@@ -1,3 +1,7 @@
+:is(h1, h2, h3, h4, h5, h6) {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+}
 .parte{
     margin-left: 6rem;
     margin-right: 6rem;
@@ -6,19 +10,17 @@
         font-size: 1.5rem;
         line-height: 3.5vh;
     }
-
     @media (max-width: $mqMaxWidth) {
 		margin: 1rem;
-	}
-    
+	}    
 }
 
 .listaBlog {
-    counter-reset: li; 
-    list-style: none; 
-    
-    &__list { //ol
-        margin: 0 0 0 2em; 
+     
+    margin: 0 0 0 2em; 
+    &__list {       
+        counter-reset: li;
+        list-style: none;     
     }
     
     &__item{
@@ -47,4 +49,21 @@
         font-weight: bold;
         border-radius: 2em;
     }
+}
+
+figure:has(figcaption) {
+	width: 100%;
+	margin: 1.5rem auto;
+}
+
+figcaption {
+    opacity:  0.65;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 2vh;
+}
+
+.image_blog {
+    border-radius: 10px;
+    width: 100%;
 }
