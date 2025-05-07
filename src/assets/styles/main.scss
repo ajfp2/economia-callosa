@@ -18,14 +18,18 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
 
-@layer bootstrap {
+@layer framework;
 
+// @import url("../../../node_modules/bootstrap/scss/bootstrap.scss") layer(framework);
+
+@layer framework {
     @import "bootstrap/scss/bootstrap.scss";
-  
 }
 
-@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+
 
 /**
  * Import layouts

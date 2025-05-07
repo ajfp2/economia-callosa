@@ -1,12 +1,120 @@
+@supports not (display: grid) {
+	.grid-poster {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 5px;
+		background-color: $blanco;
+		font-weight: 500;
+		margin-inline: auto;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border-radius: 10px;
+		color: $blanco;	
+		ul {
+			list-style-type: none;
+		}
+	}
+
+	.intro {
+		width: 68%;
+		background-color: $uoc-corporate;
+		margin: 5px;
+		padding: 10px;
+		@media (max-width: $mqMaxWidth) {
+			width: 100%;
+		}
+	}
+
+	.list-info {
+		display: flex;		
+	}
+
+	.column{
+		width: 50%;
+	}
+
+	.casacultura {
+		width: 28%;
+		margin: 5px;
+		padding: 10px;
+		background-image: url(../images/casacul.jpg);
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media (max-width: $mqMaxWidth) {
+			display: none;
+		}
+	}
+
+	.ayto {
+		width: 19%;
+		background-image: url(../images/logos/logoCallosa.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 5px;
+		@media (max-width: $mqMaxWidth) {
+			height: 15vh;
+			width: 99%;
+		}
+	}
+
+	.calendar {
+		width: 19%;
+		text-align: center;
+		background-color: $uoc-corporate;
+		color: #fff;
+		margin: 5px;
+		padding: 10px;
+		@media (max-width: $mqMaxWidth) {
+			width: 99%;
+		}
+		
+	}
+
+	.matricula {
+		width: 59%;
+		text-align: center;
+		background-color: $uoc-corporate;
+		color: #fff;
+		margin: 5px;
+		padding: 10px;
+		a {
+			color: hsl(156,44%, 76%);
+			text-decoration: none;
+		}
+
+		@media (max-width: $mqMaxWidth) {
+			width: 99%;
+		}
+	}
+
+	.table {
+		height: 15vh;
+		background-image: url(../images/logos/logoUOC.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
+		@media (max-width: $mqMaxWidth) {
+			display: none;
+		}
+	}
+}
+
+
+// Suported grid css
+
 @supports (display: grid) {
 	.grid-poster {
 		display: grid;
 		grid-gap: 5px;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas:
-			"intro 		intro 		chef"
-			"intro 		intro 		chef"
-			"calendar   ayto 	chef"
+			"intro 		intro 		casacultura"
+			"intro 		intro 		casacultura"
+			"calendar   ayto 		casacultura"
 			"table   	matricula 	matricula";
 
 		padding: 1px;
@@ -17,6 +125,10 @@
 		margin-top: 2em;
 		margin-bottom: 2em;
 		border-radius: 10px;
+
+		ul {
+			list-style-type: none;
+		}
 
 		@media (max-width: $mqMaxWidth) {
 			grid-template-columns: repeat(2, 1fr);
@@ -42,13 +154,11 @@
 		display: grid;
 		grid-gap: 5px;
 		grid-template-columns: repeat(2, 1fr);
-		ul {
-			list-style-type: none;
-		}
+		
 	}
 
 	.casacultura {
-		grid-area: chef;
+		grid-area: casacultura;
 		background-image: url(../images/casacul.jpg);
 		background-size: auto;
 		background-repeat: no-repeat;
@@ -78,10 +188,6 @@
 		color: #fff;
 		margin: 5px;
 		padding: 10px;
-		ul {
-			list-style-type: none;
-		}
-		
 	}
 
 	.matricula {
@@ -99,108 +205,6 @@
 
 	.table {
 		grid-area: table;
-		background-image: url(../images/logos/logoUOC.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		@media (max-width: $mqMaxWidth) {
-			display: none;
-		}
-	}
-}
-
-@supports (display: gridds) {
-	.grid-poster {
-		display: table;
-		padding: 1px;
-		background-color: $blanco;
-		font-weight: 500;
-		margin-inline: auto;
-		margin-top: 2em;
-		margin-bottom: 2em;
-		border-radius: 10px;
-	}
-
-
-	.intro {
-		background-color: $uoc-corporate;
-		color: #fff;
-		padding: 10px;
-		margin: 5px;
-	}
-
-	.list-info {
-		display: table-row;
-		ul {
-			list-style-type: none;
-		}
-	}
-
-	.fila{
-		display: table-row;
-		width: 100%;
-	}
-	.column {
-		display: table-cell;
-		width: 50%;
-	}
-
-
-
-	.casacultura {
-		// grid-area: chef;
-		background-image: url(../images/casacul.jpg);
-		background-size: auto;
-		background-repeat: no-repeat;
-		background-position: center;
-		height: 10vh;
-		width: 30vh;
-		margin: 5px;
-		@media (max-width: $mqMaxWidth) {
-			// display: none;
-		}
-	}
-
-	.ayto {
-		// grid-area: ayto;
-		background-image: url(../images/logos/logoCallosa.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		margin: 5px;
-		@media (max-width: $mqMaxWidth) {
-			height: 15vh;
-		}
-	}
-
-	.calendar {
-		// grid-area: calendar;
-		text-align: center;
-		background-color: $uoc-corporate;
-		color: #fff;
-		margin: 5px;
-		padding: 10px;
-		ul {
-			list-style-type: none;
-		}
-		
-	}
-
-	.matricula {
-		// grid-area: matricula;
-		text-align: center;
-		background-color: $uoc-corporate;
-		color: #fff;
-		margin: 5px;
-		padding: 10px;
-		a {
-			color: hsl(156,44%, 76%);
-			text-decoration: none;
-		}
-	}
-
-	.table {
-		// grid-area: table;
 		background-image: url(../images/logos/logoUOC.png);
 		background-size: contain;
 		background-repeat: no-repeat;

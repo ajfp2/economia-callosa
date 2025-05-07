@@ -15,22 +15,20 @@ $uoc-bg: color.scale($uoc-body, $lightness: 60%);
 $mqMinWidth: 420px;
 $mqMaxWidth: 768px;
 
-$theme-colors: (
- "primary": $uoc-corporate
-);
 
-$theme-colors-text: (
-  "primary": $uoc-corporate
-);
+// Variables bootstrap
+$primary: $uoc-corporate;
+$enable-shadows: true;
+$enable-gradients: true;
+$btn-padding-y: .6rem;
+$btn-padding-x: 1rem;
+$btn-border-radius: .78rem;
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  // display: flex;
-  // flex-direction: column;
-  height: 100vh;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
