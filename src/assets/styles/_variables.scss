@@ -15,6 +15,14 @@ $uoc-bg: color.scale($uoc-body, $lightness: 60%);
 $mqMinWidth: 420px;
 $mqMaxWidth: 768px;
 
+$theme-colors: (
+ "primary": $uoc-corporate
+);
+
+$theme-colors-text: (
+  "primary": $uoc-corporate
+);
+
 * {
   box-sizing: border-box;
 }

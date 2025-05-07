@@ -2,8 +2,6 @@ const app = document.getElementById("approot");
 
 export async function render(nompage) {
     // Renderiza la página
-    console.log('exposr', nompage);
-
     try{
         const ruta = `./views/pages/${ nompage }.html`;
         const response = await fetch(ruta);

@@ -9,14 +9,14 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title mb-4">Formulario de Contacto</h5>
-                    <form class="row g-3">
+                    <form class="row g-3" class="form_contact" netlify>
                         <div class="col-md-6">
                             <label for="name1" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" id="name1">
+                            <input type="text" class="form-control" id="name1" required>
                         </div>
                         <div class="col-md-6">
                             <label for="name2" class="form-label">Apellidos:</label>
-                            <input type="password" class="form-control" id="name2">
+                            <input type="text" class="form-control" id="name2">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Dirección:</label>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="col-md-9">
                             <label for="input_email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="input_email" placeholder="user@uoc.edu">
+                            <input type="email" class="form-control" id="input_email" placeholder="user@uoc.edu" required>
                         </div>
                         <div class="col-md-3">
                             <label for="inputZip" class="form-label">Código Postal:</label>
@@ -43,8 +43,8 @@
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <label for="inputCity" class="form-label">País:</label>
-                            <input type="text" class="form-control" id="inputCity" value="España" disabled>
+                            <label for="inputPais" class="form-label">País:</label>
+                            <input type="text" class="form-control" id="inputPais" value="España" disabled>
                         </div>
                         
                         <div class="col-12">
@@ -56,11 +56,20 @@
                             </div>
                         </div>
                         <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="button" class="btn btn-primary">Enviar</button>
                         </div>
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="toast align-items-center text-bg-success border-0 fade show" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+            <button type="submit" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
 </div>

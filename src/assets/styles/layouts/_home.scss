@@ -1,110 +1,212 @@
-.grid-poster {
-	display: grid;
-	grid-gap: 5px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-areas:
-		"intro 		intro 		chef"
-		"intro 		intro 		chef"
-		"calendar   ayto 	chef"
-		"table   	matricula 	matricula";
-
-	padding: 1px;
-	background-color: $blanco;
-	// font-family: var(--ff-3);
-	font-weight: 500;
-	margin-inline: auto;
-	margin-top: 2em;
-    margin-bottom: 2em;
-    border-radius: 10px;
-
-	@media (max-width: $mqMaxWidth) {
-		grid-template-columns: repeat(2, 1fr);
+@supports (display: grid) {
+	.grid-poster {
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas:
-			"intro		intro"
-			"intro		intro"
-			"ayto		ayto"
-			"calendar	calendar"
-			"matricula	matricula";
+			"intro 		intro 		chef"
+			"intro 		intro 		chef"
+			"calendar   ayto 	chef"
+			"table   	matricula 	matricula";
+
+		padding: 1px;
+		background-color: $blanco;
+		// font-family: var(--ff-3);
+		font-weight: 500;
+		margin-inline: auto;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border-radius: 10px;
+
+		@media (max-width: $mqMaxWidth) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				"intro		intro"
+				"intro		intro"
+				"ayto		ayto"
+				"calendar	calendar"
+				"matricula	matricula";
+		}
+	}
+
+	.intro {
+		grid-area: intro;
+		background-color: $uoc-corporate;
+		color: #fff;
+		padding: 10px;
+		margin: 5px;
+		
+	}
+
+	.list-info {
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(2, 1fr);
+		ul {
+			list-style-type: none;
+		}
+	}
+
+	.casacultura {
+		grid-area: chef;
+		background-image: url(../images/casacul.jpg);
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 5px;
+		@media (max-width: $mqMaxWidth) {
+			display: none;
+		}
+	}
+
+	.ayto {
+		grid-area: ayto;
+		background-image: url(../images/logos/logoCallosa.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 5px;
+		@media (max-width: $mqMaxWidth) {
+			height: 15vh;
+		}
+	}
+
+	.calendar {
+		grid-area: calendar;
+		text-align: center;
+		background-color: $uoc-corporate;
+		color: #fff;
+		margin: 5px;
+		padding: 10px;
+		ul {
+			list-style-type: none;
+		}
+		
+	}
+
+	.matricula {
+		grid-area: matricula;
+		text-align: center;
+		background-color: $uoc-corporate;
+		color: #fff;
+		margin: 5px;
+		padding: 10px;
+		a {
+			color: hsl(156,44%, 76%);
+			text-decoration: none;
+		}
+	}
+
+	.table {
+		grid-area: table;
+		background-image: url(../images/logos/logoUOC.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media (max-width: $mqMaxWidth) {
+			display: none;
+		}
 	}
 }
 
-
-.intro {
-	grid-area: intro;
-	// font-weight: bold;
-	background-color: $uoc-corporate;
-	color: #fff;
-    padding: 10px;
-	margin: 5px;
-	
-}
-
-.list-info {
-    display: grid;
-	grid-gap: 5px;
-	grid-template-columns: repeat(2, 1fr);
-	ul {
-		list-style-type: none;
+@supports (display: gridds) {
+	.grid-poster {
+		display: table;
+		padding: 1px;
+		background-color: $blanco;
+		font-weight: 500;
+		margin-inline: auto;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		border-radius: 10px;
 	}
-}
 
-.casacultura {
-	grid-area: chef;
-	background-image: url(../images/casacul.jpg);
-	background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center;
-	margin: 5px;
-	@media (max-width: $mqMaxWidth) {
-		display: none;
+
+	.intro {
+		background-color: $uoc-corporate;
+		color: #fff;
+		padding: 10px;
+		margin: 5px;
 	}
-}
 
-.ayto {
-	grid-area: ayto;
-	background-image: url(../images/logos/logoCallosa.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	margin: 5px;
-	@media (max-width: $mqMaxWidth) {
-		height: 15vh;
+	.list-info {
+		display: table-row;
+		ul {
+			list-style-type: none;
+		}
 	}
-}
 
-.calendar {
-	grid-area: calendar;
-	text-align: center;
-    background-color: $uoc-corporate;
-	color: #fff;
-	margin: 5px;
-	padding: 10px;
-	ul {
-		list-style-type: none;
+	.fila{
+		display: table-row;
+		width: 100%;
 	}
-	  
-}
-
-.matricula {
-	grid-area: matricula;
-	text-align: center;
-    background-color: $uoc-corporate;
-	color: #fff;
-	margin: 5px;
-	padding: 10px;
-	a {
-		color: hsl(156,44%, 76%);
-		text-decoration: none;
+	.column {
+		display: table-cell;
+		width: 50%;
 	}
-}
 
-.table {
-	grid-area: table;
-	background-image: url(../images/logos/logoUOC.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	@media (max-width: $mqMaxWidth) {
-		display: none;
+
+
+	.casacultura {
+		// grid-area: chef;
+		background-image: url(../images/casacul.jpg);
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 10vh;
+		width: 30vh;
+		margin: 5px;
+		@media (max-width: $mqMaxWidth) {
+			// display: none;
+		}
+	}
+
+	.ayto {
+		// grid-area: ayto;
+		background-image: url(../images/logos/logoCallosa.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 5px;
+		@media (max-width: $mqMaxWidth) {
+			height: 15vh;
+		}
+	}
+
+	.calendar {
+		// grid-area: calendar;
+		text-align: center;
+		background-color: $uoc-corporate;
+		color: #fff;
+		margin: 5px;
+		padding: 10px;
+		ul {
+			list-style-type: none;
+		}
+		
+	}
+
+	.matricula {
+		// grid-area: matricula;
+		text-align: center;
+		background-color: $uoc-corporate;
+		color: #fff;
+		margin: 5px;
+		padding: 10px;
+		a {
+			color: hsl(156,44%, 76%);
+			text-decoration: none;
+		}
+	}
+
+	.table {
+		// grid-area: table;
+		background-image: url(../images/logos/logoUOC.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		@media (max-width: $mqMaxWidth) {
+			display: none;
+		}
 	}
 }
