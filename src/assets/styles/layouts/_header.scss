@@ -5,9 +5,28 @@
         color:hsl(0 0% 30%)
     }
 }
-
-
-.navLogo {
-    max-width: 200px;
+/*
+%title-shared {
+  font-family: $font-family-serif;  
+  font-size: 36px;  
+  color: $uoc-corporate;
+  @media (max-width: $mqMinWidth) {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
 
+.uoc-title {
+  @extend %title-shared;  
+}
+
+.title {
+  @extend %title-shared;
+  text-align: center;
+  margin: 30px auto;
+  @media (max-width: $mqMinWidth) {
+    margin: 15px auto;
+  }
+}
+
+*/

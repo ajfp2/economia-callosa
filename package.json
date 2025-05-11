@@ -8,7 +8,7 @@
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
-    "build": "npm-run-all clean parcel:build",
+    "build": "npm-run-all clean stylelint parcel:build",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
     "stylelint": "stylelint src/**/*.scss"
   },
@@ -50,6 +50,7 @@
     "stylelint-selector-bem-pattern": "^4.0.1"
   },
   "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5"

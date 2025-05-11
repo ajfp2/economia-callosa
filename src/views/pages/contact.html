@@ -1,4 +1,4 @@
-<div class="container px-1 py-5 mx-auto contact_form">
+<div class="container px-1 py-5 mx-auto contact-form">
     <h2>Solicitanos información</h2>
     <p class="text-primary text-center">Envianos tus datos<br> y nos pondremos en contacto contigo para informarte.</p>
     <div class="card" >
@@ -38,8 +38,14 @@
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">Provincia:</label>
                             <select id="inputState" class="form-select">
-                                <option selected="">Seleccionar...</option>
-                                <option>...</option>
+                                <option selected="" value="0">Seleccionar...</option>
+                                <option value="1">Alicante</option>
+                                <option value="2">Valencia</option>
+                                <option value="3">Castellón</option>
+                                <option value="4">Murcia</option>
+                                <option value="5">Albacete</option>
+                                <option value="6">Tarragona</option>
+                                <option value="7">Barcelona</option>
                             </select>
                         </div>
                         <div class="col-md-4">
@@ -49,14 +55,14 @@
                         
                         <div class="col-12">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <input class="form-check-input" type="checkbox" name="politicaCH" id="gridCheck">
                                 <label class="form-check-label" for="gridCheck">
                                     He leído y acepto la política de datos
                                 </label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="button" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Enviar</button>
+                            <button type="submit" class="btn btn-primary" disabled id="submitForm"><i class="fa fa-paper-plane"></i> Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -64,12 +70,8 @@
         </div>
     </div>
 
-    <div class="toast align-items-center text-bg-success border-0 fade show" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-            <div class="toast-body">
-                Hello, world! This is a toast message.
-            </div>
-            <button type="submit" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
+    <div aria-live="polite" aria-atomic="true">
+        <div class="toast-container position-absolute p-3" id="toast-container" style="z-index:9;"></div>
     </div>
+    
 </div>
