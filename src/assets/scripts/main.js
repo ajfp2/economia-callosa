@@ -8,7 +8,6 @@ import * as bootstrap from 'bootstrap';
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
 import { render } from './render';
-import { contactJS } from './contact';
 
 /**
  * Write any other JavaScript below
@@ -25,10 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();                        
         link.classList.add('active');
         render(name);
-        //if(name == 'contact') contactJS();
       });
   });
-
 });
 
 
